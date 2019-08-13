@@ -1,0 +1,137 @@
+html {
+  background-color: black;
+  color: white;
+}
+
+body {
+  margin: 0rem;
+}
+
+.App {
+  font-family: "Fira Sans", sans-serif;;
+  width: 30rem;
+  height: 30rem;
+  margin: auto;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-full {
+  flex: 1;
+}
+
+.point:hover {
+  cursor: pointer;
+}
+
+.cue-logo {
+  height: 5rem;
+  margin-left: 0.5rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+  user-select: none;
+  animation-name: logo-neon-effect;
+  animation-duration: 2.133s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.cue-logo:hover {
+  cursor: pointer;
+}
+
+@keyframes neon {
+  0% {
+      box-shadow: 0 0 1rem white, 0 0 2rem white, 0 0 4rem white, 0 0 6rem white;
+  }
+
+  100% {
+      box-shadow: 0 0 0.5rem white, 0 0 1rem white, 0 0 2rem white, 0 0 3rem white;
+  }
+}
+
+@keyframes logo-neon-effect {
+  0% {
+      filter: drop-shadow(0 0 0rem white);
+  }
+
+  100% {
+      filter: drop-shadow(0 0 0.4rem white);
+  }
+}
+
+.login-button {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  color: black;
+  background-color: white;
+  text-align: center;
+  outline: none;
+}
+
+.login-button:hover {
+  cursor: pointer;
+  z-index: 20;
+  border-color: white;
+  animation-name: neon;
+  animation-duration: 2.133s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+input {
+  display: block;
+  margin: auto;
+  width: 16rem;
+  height: 100%;
+  padding: 0.5rem;
+  height: 1rem;
+  background-color: rgb(30, 30, 35);
+  background-image: none;
+  border: 0px solid #a0b3b0;
+  color: white;
+  border-radius: 0;
+  transition: border-color .25s ease, box-shadow .25s ease;
+  text-shadow: 0.5px 0.5px 1px black;
+}
+
+input:focus {
+  outline:0;
+}
+
+.control-icon {
+  filter: invert(100%);
+  width: 2rem;
+  height: 2rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  border-top-color: rgb(255, 255, 255);
+  animation: spin 1s infinite linear;
+}
