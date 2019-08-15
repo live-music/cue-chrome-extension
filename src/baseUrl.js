@@ -1,5 +1,5 @@
 export const ENVIRONMENT = 'DEV';
-export const EXTENSION_BUILD = true;
+export const EXTENSION_BUILD = false;
 // export const ENVIRONMENT = 'PROD';
 
 export function apiUrl() {
