@@ -10,9 +10,10 @@ export default function App() {
 
   function logout() {
     dispatch(setSession(null));
-    const port = getPort();
     dispatch(setPlayingState('stopped'));
     dispatch(setLiveUrl(null));
+
+    const port = getPort();
     port.postMessage({ stop: true });
   }
 

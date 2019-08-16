@@ -6,10 +6,10 @@ player.addEventListener('playing', () => {
   port.postMessage({ playState: 'playing' });
 });
 
-chrome.runtime.onConnect.addListener(function(newPort) {
+chrome.runtime.onConnect.addListener(newPort => {
   port = newPort;
 
-  port.onMessage.addListener(function(request) {
+  port.onMessage.addListener(request => {
     if (request.play) {
       player.src = request.play;
       player.play();
